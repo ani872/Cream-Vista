@@ -1,27 +1,26 @@
-// ==================== GLOBAL VARIABLES ====================
 const navbar = document.querySelector('.navbar');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
-// Flavor Slider Elements
+
 const flavorWrapper = document.querySelector('.cards-wrapper');
 const flavorCards = document.querySelectorAll('.flavor-card');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const sliderDotsContainer = document.querySelector('.slider-dots');
 
-// Review Slider Elements
+
 const reviewWrapper = document.querySelector('.reviews-wrapper');
 const reviewCards = document.querySelectorAll('.review-card');
 const reviewPrevBtn = document.querySelector('.review-prev-btn');
 const reviewNextBtn = document.querySelector('.review-next-btn');
 const reviewDotsContainer = document.querySelector('.review-dots');
 
-// Toast Element
+
 const toast = document.getElementById('toast');
 
-// Slider State
+
 let flavorCurrentIndex = 0;
 let reviewCurrentIndex = 0;
 let cardsPerView = 3;
@@ -33,14 +32,13 @@ let reviewStartX = 0;
 let flavorAutoplayInterval;
 let reviewAutoplayInterval;
 
-// ==================== NAVBAR FUNCTIONALITY ====================
-// Mobile menu toggle
+
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     hamburger.classList.toggle('active');
 });
 
-// Close menu when clicking nav link
+
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -48,7 +46,7 @@ navLinks.forEach(link => {
     });
 });
 
-// Navbar scroll effect
+
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
         navbar.classList.add('scrolled');
@@ -57,7 +55,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Smooth scroll for navigation links
+
 navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -74,7 +72,7 @@ navLinks.forEach(link => {
     });
 });
 
-// ==================== FLAVOR SLIDER FUNCTIONS ====================
+
 function getFlavorCardsPerView() {
     if (window.innerWidth <= 640) return 1;
     if (window.innerWidth <= 968) return 2;
@@ -132,7 +130,7 @@ function nextFlavorSlide() {
     if (flavorCurrentIndex < maxIndex) {
         flavorCurrentIndex++;
     } else {
-        flavorCurrentIndex = 0; // Loop back to start
+        flavorCurrentIndex = 0; 
     }
     updateFlavorSlider();
 }
@@ -144,7 +142,7 @@ function prevFlavorSlide() {
     }
 }
 
-// Flavor slider button events
+
 prevBtn.addEventListener('click', () => {
     prevFlavorSlide();
     restartFlavorAutoplay();
@@ -155,7 +153,7 @@ nextBtn.addEventListener('click', () => {
     restartFlavorAutoplay();
 });
 
-// Flavor slider drag/touch functionality
+
 flavorWrapper.addEventListener('mousedown', startFlavorDrag);
 flavorWrapper.addEventListener('touchstart', startFlavorDrag);
 document.addEventListener('mousemove', flavorDrag);
@@ -194,7 +192,7 @@ function endFlavorDrag() {
     }
 }
 
-// Flavor slider autoplay
+
 function startFlavorAutoplay() {
     flavorAutoplayInterval = setInterval(() => {
         nextFlavorSlide();
@@ -210,7 +208,7 @@ function restartFlavorAutoplay() {
     setTimeout(startFlavorAutoplay, 2000);
 }
 
-// ==================== REVIEW SLIDER FUNCTIONS ====================
+
 function getReviewCardsPerView() {
     if (window.innerWidth <= 640) return 1;
     if (window.innerWidth <= 968) return 2;
@@ -268,7 +266,7 @@ function nextReviewSlide() {
     if (reviewCurrentIndex < maxIndex) {
         reviewCurrentIndex++;
     } else {
-        reviewCurrentIndex = 0; // Loop back
+        reviewCurrentIndex = 0;
     }
     updateReviewSlider();
 }
@@ -280,7 +278,7 @@ function prevReviewSlide() {
     }
 }
 
-// Review slider button events
+
 reviewPrevBtn.addEventListener('click', () => {
     prevReviewSlide();
     restartReviewAutoplay();
@@ -291,7 +289,7 @@ reviewNextBtn.addEventListener('click', () => {
     restartReviewAutoplay();
 });
 
-// Review slider drag/touch functionality
+
 reviewWrapper.addEventListener('mousedown', startReviewDrag);
 reviewWrapper.addEventListener('touchstart', startReviewDrag);
 document.addEventListener('mousemove', reviewDrag);
@@ -346,7 +344,7 @@ function restartReviewAutoplay() {
     setTimeout(startReviewAutoplay, 2000);
 }
 
-// ==================== KEYBOARD NAVIGATION ====================
+
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') {
         prevFlavorSlide();
@@ -357,8 +355,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// ==================== FORM HANDLING ====================
-// Contact Form
+
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -368,7 +365,7 @@ if (contactForm) {
     });
 }
 
-// Reservation Form
+
 const reservationForm = document.getElementById('reservationForm');
 if (reservationForm) {
     reservationForm.addEventListener('submit', (e) => {
@@ -378,7 +375,7 @@ if (reservationForm) {
     });
 }
 
-// Newsletter Form (Main)
+
 const newsletterForm = document.getElementById('newsletterForm');
 if (newsletterForm) {
     newsletterForm.addEventListener('submit', (e) => {
@@ -388,7 +385,7 @@ if (newsletterForm) {
     });
 }
 
-// Newsletter Form (Footer)
+
 const footerNewsletter = document.getElementById('footerNewsletter');
 if (footerNewsletter) {
     footerNewsletter.addEventListener('submit', (e) => {
@@ -398,14 +395,14 @@ if (footerNewsletter) {
     });
 }
 
-// Add to Cart Buttons
+
 const addCartButtons = document.querySelectorAll('.add-cart');
 addCartButtons.forEach(button => {
     button.addEventListener('click', (e) => {
         const flavor = e.target.getAttribute('data-flavor');
         showToast(`${flavor} ice cream added to cart!`);
         
-        // Button animation
+        
         e.target.style.transform = 'scale(0.9)';
         setTimeout(() => {
             e.target.style.transform = 'scale(1)';
@@ -413,7 +410,7 @@ addCartButtons.forEach(button => {
     });
 });
 
-// ==================== TOAST NOTIFICATION ====================
+
 function showToast(message) {
     toast.textContent = message;
     toast.classList.add('show');
@@ -423,7 +420,7 @@ function showToast(message) {
     }, 3000);
 }
 
-// ==================== SCROLL ANIMATIONS ====================
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -438,7 +435,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all sections
+
 const sections = document.querySelectorAll('section');
 sections.forEach(section => {
     section.style.opacity = '0';
@@ -447,22 +444,22 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
-// ==================== WINDOW RESIZE HANDLER ====================
+
 let resizeTimeout;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
-        // Recalculate slider positions
+        
         updateFlavorSlider();
         updateReviewSlider();
         
-        // Recreate dots
+       
         createFlavorDots();
         createReviewDots();
     }, 250);
 });
 
-// ==================== PARALLAX EFFECT ====================
+
 const floatingElements = document.querySelectorAll('.float-element');
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
@@ -474,29 +471,29 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// ==================== YEAR UPDATE ====================
+
 const yearSpan = document.getElementById('year');
 if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
 }
 
-// ==================== INITIALIZATION ====================
+
 function initializeSliders() {
-    // Initialize Flavor Slider
+    
     cardsPerView = getFlavorCardsPerView();
     createFlavorDots();
     updateFlavorSlider();
     startFlavorAutoplay();
     flavorWrapper.style.cursor = 'grab';
     
-    // Initialize Review Slider
+   
     reviewsPerView = getReviewCardsPerView();
     createReviewDots();
     updateReviewSlider();
     startReviewAutoplay();
     reviewWrapper.style.cursor = 'grab';
     
-    // Pause autoplay on hover
+  
     const flavorSection = document.querySelector('.flavors');
     const reviewSection = document.querySelector('.reviews');
     
@@ -511,11 +508,11 @@ function initializeSliders() {
     }
 }
 
-// ==================== PAGE LOAD ====================
+
 window.addEventListener('DOMContentLoaded', () => {
     initializeSliders();
     
-    // Smooth entrance for hero elements
+    
     const heroTitle = document.querySelector('.hero-title');
     const heroSubtitle = document.querySelector('.hero-subtitle');
     const heroButtons = document.querySelector('.hero-buttons');
@@ -535,14 +532,14 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// ==================== PREVENT CONTEXT MENU ON IMAGES ====================
+
 const images = document.querySelectorAll('img');
 images.forEach(img => {
     img.addEventListener('contextmenu', (e) => e.preventDefault());
     img.setAttribute('draggable', 'false');
 });
 
-// ==================== SMOOTH SCROLL BEHAVIOR ====================
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -558,7 +555,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ==================== LOADING ANIMATION ====================
 window.addEventListener('load', () => {
     document.body.style.opacity = '0';
     setTimeout(() => {
