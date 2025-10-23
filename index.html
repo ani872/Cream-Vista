@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cream Vista - Homemade Ice Cream & Cafe</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="nav-container container">
+            <div class="logo" tabindex="0">
+                <h1>Cream Vista</h1>
+            </div>
+            <ul class="nav-menu" role="menubar" aria-label="Primary">
+                <li role="none"><a role="menuitem" href="#home" class="nav-link">Home</a></li>
+                <li role="none"><a role="menuitem" href="#about" class="nav-link">About</a></li>
+                <li role="none"><a role="menuitem" href="#flavors" class="nav-link">Flavors</a></li>
+                <li role="none"><a role="menuitem" href="#reviews" class="nav-link">Reviews</a></li>
+                <li role="none"><a role="menuitem" href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+
+  <section id="home" class="hero" aria-labelledby="hero-heading">
+    <img class="hero-banner-img" src="images/home_banner.jpeg" alt="Delicious Ice Cream">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1 id="hero-heading" class="hero-title">Homemade Ice Creams For You</h1>
+            <p class="hero-subtitle">Experience the joy of authentic, handcrafted ice cream made with love and the finest ingredients</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Order/Reserve</a>
+                <a href="#flavors" class="btn btn-secondary">View Menu</a>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <section id="about" class="about container" aria-labelledby="about-heading">
+        <div class="section-header">
+            <h2 id="about-heading" class="section-title">Our Sweet Story</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="images/about_shop.jpeg" alt="Ice Cream Making Process" class="about-img">
+            </div>
+            <div class="about-text">
+                <p>Cream Vista isn't just an ice cream shop – it's a community gathering place where memories are made. We've been serving our neighborhood with premium handcrafted ice cream since 2020, and every customer feels like family.</p>
+                <p>Our artisan approach means no artificial colors, no preservatives, and no shortcuts. We take pride in creating ice cream that tastes just like homemade – because it is! From classic favorites to innovative flavors, each recipe is perfected through passion and dedication to bring you the ultimate frozen treat experience.</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="feature-icon">✨</div>
+                        <h3>Premium Quality</h3>
+                        <p>Made with finest ingredients</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🥛</div>
+                        <h3>100% Natural</h3>
+                        <p>No artificial flavors</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">❤️</div>
+                        <h3>Made with Love</h3>
+                        <p>Handcrafted daily</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <section id="flavors" class="flavors container" aria-labelledby="flavors-heading">
+        <div class="section-header">
+            <h2 id="flavors-heading" class="section-title">Our Delicious Flavors</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="slider-container" aria-roledescription="carousel" aria-label="Flavors carousel">
+            <button class="slider-btn prev-btn" aria-label="Previous flavor">❮</button>
+            <div class="cards-viewport">
+                <div class="cards-wrapper" role="list">
+                    <div class="flavor-card" role="listitem" tabindex="0">
+                        <div class="card-image"><img src="images/card1.jpeg" alt="Strawberry Ice Cream"></div>
+                        <div class="card-content">
+                            <h3>Strawberry Delight</h3>
+                            <p>Fresh strawberries blended into creamy perfection</p>
+                            <div class="card-bottom">
+                                <span class="price">$4.99</span>
+                                <button class="btn btn-outline small add-cart" data-flavor="Strawberry">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flavor-card" role="listitem" tabindex="0">
+                        <div class="card-image"><img src="images/card2.jpeg" alt="Chocolate Ice Cream"></div>
+                        <div class="card-content">
+                            <h3>Chocolate Heaven</h3>
+                            <p>Rich Belgian chocolate in every scoop</p>
+                            <div class="card-bottom">
+                                <span class="price">$5.49</span>
+                                <button class="btn btn-outline small add-cart" data-flavor="Chocolate">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flavor-card" role="listitem" tabindex="0">
+                        <div class="card-image"><img src="images/card3.jpeg" alt="Vanilla Ice Cream"></div>
+                        <div class="card-content">
+                            <h3>Classic Vanilla</h3>
+                            <p>Pure Madagascar vanilla bean ice cream</p>
+                            <div class="card-bottom">
+                                <span class="price">$4.49</span>
+                                <button class="btn btn-outline small add-cart" data-flavor="Vanilla">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flavor-card" role="listitem" tabindex="0">
+                        <div class="card-image"><img src="images/card4.png" alt="Mint Chocolate Chip"></div>
+                        <div class="card-content">
+                            <h3>Mint Chocolate Chip</h3>
+                            <p>Refreshing mint with chocolate chunks</p>
+                            <div class="card-bottom">
+                                <span class="price">$5.99</span>
+                                <button class="btn btn-outline small add-cart" data-flavor="Mint">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flavor-card" role="listitem" tabindex="0">
+                        <div class="card-image"><img src="images/card5.jpeg" alt="Mango Ice Cream"></div>
+                        <div class="card-content">
+                            <h3>Mango Tango</h3>
+                            <p>Tropical mango bliss in every bite</p>
+                            <div class="card-bottom">
+                                <span class="price">$5.29</span>
+                                <button class="btn btn-outline small add-cart" data-flavor="Mango">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flavor-card" role="listitem" tabindex="0">
+                        <div class="card-image"><img src="images/card6.jpeg" alt="Butterscotch Ice Cream"></div>
+                        <div class="card-content">
+                            <h3>Butterscotch Bliss</h3>
+                            <p>Smooth caramel butterscotch swirl</p>
+                            <div class="card-bottom">
+                                <span class="price">$4.99</span>
+                                <button class="btn btn-outline small add-cart" data-flavor="Butterscotch">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flavor-card" role="listitem" tabindex="0">
+                        <div class="card-image"><img src="images/card7.png" alt="Cookies & Cream"></div>
+                        <div class="card-content">
+                            <h3>Cookies & Cream</h3>
+                            <p>Crushed Oreo cookies in vanilla cream</p>
+                            <div class="card-bottom">
+                                <span class="price">$5.79</span>
+                                <button class="btn btn-outline small add-cart" data-flavor="Cookies">Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flavor-card" role="listitem" tabindex="0">
+                        <div class="card-image"><img src="images/card8.png" alt="Cherry Garcia"></div>
+                        <div class="card-content">
+                            <h3>Cherry Garcia</h3>
+                            <p>Sweet cherries with dark chocolate chunks</p>
+                            <div class="card-bottom">
+                                <span class="price">$6.29</span>
+                                <button class="btn btn-outline small add-cart" data-flavor="Cherry">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn next-btn" aria-label="Next flavor">❯</button>
+        </div>
+        <div class="slider-dots" aria-label="Slider navigation"></div>
+    </section>
+
+    
+    <section id="reviews" class="reviews container" aria-labelledby="reviews-heading">
+        <div class="section-header">
+            <h2 id="reviews-heading" class="section-title">What Our Customers Say</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="reviews-slider" aria-roledescription="carousel" aria-label="Customer reviews">
+            <button class="review-btn review-prev-btn" aria-label="Previous review">❮</button>
+            <div class="reviews-viewport">
+                <div class="reviews-wrapper">
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">Absolutely the best ice cream I've ever tasted! The strawberry flavor is so fresh and natural. My kids love it too!</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">👩</div>
+                            <div class="reviewer-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Food Blogger</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">The chocolate heaven is truly heavenly! Rich, creamy, and not too sweet. Perfect for a hot summer day.</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">👨</div>
+                            <div class="reviewer-info">
+                                <h4>Michael Chen</h4>
+                                <p>Ice Cream Enthusiast</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">Love the variety! Every flavor is unique and made with quality ingredients. The mint chocolate chip is my favorite!</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">👧</div>
+                            <div class="reviewer-info">
+                                <h4>Emma Rodriguez</h4>
+                                <p>College Student</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">Best homemade ice cream in town! The staff is friendly and the ambiance is perfect for family outings.</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">👴</div>
+                            <div class="reviewer-info">
+                                <h4>Robert Williams</h4>
+                                <p>Regular Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">The mango tango is incredible! Tastes like real mangoes. I drive 20 miles just to get this ice cream!</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">👩‍🦱</div>
+                            <div class="reviewer-info">
+                                <h4>Priya Patel</h4>
+                                <p>Local Resident</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="review-btn review-next-btn" aria-label="Next review">❯</button>
+        </div>
+        <div class="review-dots" aria-label="Reviews navigation"></div>
+    </section>
+
+    
+    <section id="contact" class="contact container" aria-labelledby="contact-heading">
+        <div class="section-header">
+            <h2 id="contact-heading" class="section-title">Contact & Reservations</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="contact-layout">
+            <aside class="contact-sidebar" aria-labelledby="contact-aside-title">
+                <h3 id="contact-aside-title">Visit & Contact</h3>
+                <div class="contact-block">
+                    <strong>Address</strong>
+                    <p>123 Sweet Street, Dessert City, DC 12345</p>
+                </div>
+                <div class="contact-block">
+                    <strong>Hours</strong>
+                    <p>Mon-Fri: 10:00 AM - 9:00 PM<br>Sat-Sun: 9:00 AM - 10:00 PM</p>
+                </div>
+                <div class="contact-block">
+                    <strong>Phone</strong>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="contact-block">
+                    <strong>Email</strong>
+                    <p>hello@creamvista.com</p>
+                </div>
+            </aside>
+
+            <div class="contact-forms">
+                <form id="contactForm" class="contact-form" aria-label="Message form">
+                    <h4>Send us a message</h4>
+                    <input id="contact-name" name="name" type="text" placeholder="Your Name" required>
+                    <input id="contact-email" name="email" type="email" placeholder="Your Email" required>
+                    <textarea id="contact-message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+
+                <form id="reservationForm" class="contact-form reservation-form" aria-label="Reservation form">
+                    <h4>Make a reservation</h4>
+                    <input id="res-name" type="text" placeholder="Full Name" required>
+                    <input id="res-phone" type="tel" placeholder="Phone number" required>
+                    <div class="two-col">
+                        <input id="res-date" type="date" required>
+                        <input id="res-time" type="time" required>
+                    </div>
+                    <input id="res-guests" type="number" min="1" max="20" placeholder="Number of guests" value="2" required>
+                    <button type="submit" class="btn btn-secondary">Reserve Table</button>
+                </form>
+
+                <form id="newsletterForm" class="newsletter-form" aria-label="Newsletter sign up">
+                    <h4>Join our Vista club</h4>
+                    <div class="newsletter-row">
+                        <input id="newsletter-email" type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <p class="newsletter-note">Get exclusive flavors, offers & events.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+  
+    <footer class="footer" role="contentinfo">
+        <div class="container footer-inner">
+            <div class="footer-top">
+                <di class="footer-about">
+                    <h3>Cream Vista</h3>
+                    <p>Bringing joy at a time since 2020. Handcrafted, small-batch ice cream made with real ingredients.</p>
+                </di>
+                <div class="footer-middle">
+                <div class="footer-payment">
+                    <h4>We Accept</h4>
+                    <div class="payment-icons">
+                        <div class="payment-icon">
+                            <svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="32" rx="4" fill="#1434CB"/>
+                                <path d="M18 10L15 22H12L15 10H18Z" fill="white"/>
+                                <path d="M26 10L22.5 18L21 11H18L20.5 22H23.5L29 10H26Z" fill="white"/>
+                                <circle cx="33" cy="16" r="5" fill="#EB001B"/>
+                                <circle cx="39" cy="16" r="5" fill="#F79E1B"/>
+                            </svg>
+                            <span>Visa</span>
+                        </div>
+                        <div class="payment-icon">
+                            <svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="32" rx="4" fill="#252525"/>
+                                <circle cx="18" cy="16" r="8" fill="#EB001B"/>
+                                <circle cx="30" cy="16" r="8" fill="#F79E1B"/>
+                            </svg>
+                            <span>Mastercard</span>
+                        </div>
+                        <div class="payment-icon">
+                            <svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="32" rx="4" fill="#003087"/>
+                                <path d="M16 12C16 10.8954 16.8954 10 18 10H20C21.1046 10 22 10.8954 22 12V20C22 21.1046 21.1046 22 20 22H18C16.8954 22 16 21.1046 16 20V12Z" fill="#009CDE"/>
+                                <path d="M26 12C26 10.8954 26.8954 10 28 10H30C31.1046 10 32 10.8954 32 12V20C32 21.1046 31.1046 22 30 22H28C26.8954 22 26 21.1046 26 20V12Z" fill="#009CDE"/>
+                            </svg>
+                            <span>PayPal</span>
+                        </div>
+                        <div class="payment-icon">
+                            <svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="32" rx="4" fill="#097939"/>
+                                <circle cx="14" cy="16" r="4" fill="#ffffff"/>
+                                <circle cx="24" cy="16" r="4" fill="#FA9D2B"/>
+                                <circle cx="34" cy="16" r="4" fill="#ffffff"/>
+                            </svg>
+                            <span>UPI</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="footer-apps">
+                    <h4>Download Our App</h4>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn" target="_blank" rel="noopener">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" fill="currentColor"/>
+                            </svg>
+                            <div class="app-text">
+                                <span class="app-small">Download on the</span>
+                                <span class="app-large">App Store</span>
+                            </div>
+                        </a>
+                        <a href="#" class="app-btn" target="_blank" rel="noopener">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12ZM20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81ZM6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z" fill="currentColor"/>
+                            </svg>
+
+                            <div class="app-text">
+                                <span class="app-small">GET IT ON</span>
+                                <span class="app-large">Google Play</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+              <div class="footer-news">
+  <h4>Follow & Stay Updated</h4>
+  <div class="social-links-row">
+    <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon">
+      <i class="fab fa-x-twitter"></i>
+    </a>
+  </div>
+</div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Cream Vista. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- TOAST -->
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
