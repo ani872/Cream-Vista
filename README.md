@@ -34,19 +34,5 @@ Commit your changes (git commit -m 'Add some AmazingFeature')
 Push to the branch (git push origin feature/AmazingFeature)
 Open a Pull Request
 
-📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-
-Website: www.creamvista.com
-Email: hello@creamvista.com
-Phone: +1 (555) 123-4567
-
-🙏 Acknowledgments
-
-Icons from Font Awesome
-Fonts from Google Fonts
-Inspiration from modern ice cream shop designs
-
-📞 Support
-For support, email hello@creamvista.com or create an issue in the repository.
+Live Link Demo 
+https://ani872.github.io/Cream-Vista/
